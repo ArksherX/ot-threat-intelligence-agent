@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # Ollama service for running Qwen LLM
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ot-agent-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # OT Threat Agent
+  agent:
+    build: .
+    container_name: ot-threat-agent
+    depends_on:
+      - ollama
+    environment:
+      - NVD_API_KEY=${NVD_API_KEY}
+      - QWEN_MODEL=qwen2.5:latest
+      - FETCH_INTERVAL_MINUTES=10
+      - OLLAMA_HOST=ollama:11434
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    command: python run_agent.py --continuous
+    restart: unless-stopped
+
+  # Streamlit Dashboard
+  dashboard:
+    build: .
+    container_name: ot-agent-dashboard
+    depends_on:
+      - agent
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+    command: streamlit run src/dashboard.py --server.address 0.0.0.0
+    restart: unless-stopped
+
+volumes:
+  ollama_data:
+    driver: local
