@@ -115,7 +115,7 @@ Built for the ControlPoint AI & Data Internship Challenge.
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ot-threat-intelligence-agent.git
+git clone https://github.com/ArksherX/ot-threat-intelligence-agent.git
 cd ot-threat-intelligence-agent
 ```
 
