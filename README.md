@@ -545,8 +545,8 @@ This project is created for the ControlPoint AI & Data Internship Challenge.
 ## 👤 Author
 
 **Your Name**  
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: Arksher(https://github.com/ArksherX)
+- Email: owolabimiracle.com
 
 ---
 
