@@ -1,0 +1,165 @@
+{
+  "generated_at": "2026-02-11T12:30:00Z",
+  "total_threats": 12,
+  "threats": [
+    {
+      "cve_id": "CVE-2024-5892",
+      "severity": "CRITICAL",
+      "cvss_score": 10.0,
+      "description": "Omron CJ2 PLC series contains a vulnerability that allows unauthenticated remote access to controller functions. Attackers can remotely modify ladder logic, read/write memory, and execute arbitrary commands without authentication.",
+      "ai_insight": "⚠️ CRITICAL IMPACT: This vulnerability affects widely-deployed PLCs in manufacturing environments. Unauthenticated remote access could allow threat actors to manipulate industrial processes, cause equipment damage, or create safety hazards. Immediate network segmentation and access control implementation required.",
+      "published_date": "2024-06-18T15:40:00Z",
+      "last_modified": "2024-06-20T10:15:00Z",
+      "references": [
+        "https://www.cisa.gov/uscert/ics/advisories/icsa-24-169-02",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-5892",
+        "https://www.omron.com/global/en/security/2024-06-001.html"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-2789",
+      "severity": "CRITICAL",
+      "cvss_score": 9.8,
+      "description": "Yokogawa CENTUM VP distributed control system contains a memory corruption vulnerability in the HIS (Human Interface Station) component that could lead to remote code execution via specially crafted network packets.",
+      "ai_insight": "⚠️ HIGH RISK: CENTUM VP is deployed in critical infrastructure including oil & gas, chemical plants, and power generation. Memory corruption vulnerabilities enable complete system compromise. Attack vector is network-accessible, requiring no user interaction. Priority patching recommended for all exposed systems.",
+      "published_date": "2024-03-28T08:20:00Z",
+      "last_modified": "2024-04-02T14:30:00Z",
+      "references": [
+        "https://www.cisa.gov/uscert/ics/advisories/icsa-24-087-03",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-2789",
+        "https://www.yokogawa.com/library/resources/white-papers/security-advisory-report/"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-1456",
+      "severity": "CRITICAL",
+      "cvss_score": 9.8,
+      "description": "GE Digital iFIX SCADA system contains hard-coded credentials in the database interface module, allowing attackers with network access to gain administrative privileges and full control over the SCADA system.",
+      "ai_insight": "⚠️ AUTHENTICATION BYPASS: Hard-coded credentials represent a fundamental security flaw that cannot be mitigated without patching. iFIX is widely used in water treatment, energy, and manufacturing sectors. Attackers can leverage this for full system takeover, data exfiltration, or process manipulation. Immediate update required.",
+      "published_date": "2024-02-20T14:45:00Z",
+      "last_modified": "2024-02-22T09:10:00Z",
+      "references": [
+        "https://www.cisa.gov/uscert/ics/advisories/icsa-24-051-02",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-1456"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-28424",
+      "severity": "CRITICAL",
+      "cvss_score": 9.8,
+      "description": "Honeywell Experion PKS distributed control system contains a buffer overflow vulnerability in the C300 controller communication module that allows remote code execution without authentication.",
+      "ai_insight": "⚠️ PROCESS CONTROL RISK: Experion PKS controls critical processes in refineries, chemical plants, and power stations. Buffer overflow in controller communications enables attacker to inject malicious code directly into process control logic. Potential for physical damage, safety incidents, or production disruption. Network isolation and monitoring essential until patched.",
+      "published_date": "2023-05-09T16:15:00Z",
+      "last_modified": "2023-05-11T11:20:00Z",
+      "references": [
+        "https://www.cisa.gov/uscert/ics/advisories/icsa-23-129-01",
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-28424",
+        "https://process.honeywell.com/us/en/site/security"
+      ]
+    },
+    {
+      "cve_id": "CVE-2025-0891",
+      "severity": "HIGH",
+      "cvss_score": 7.5,
+      "description": "Siemens SIMATIC S7-1500 firmware contains an integer overflow vulnerability in the PROFINET stack that could lead to denial of service when processing malformed DCP packets.",
+      "ai_insight": "🔶 AVAILABILITY IMPACT: S7-1500 PLCs are backbone devices in modern industrial automation. DoS attacks can halt production lines, causing significant financial losses. While not allowing code execution, availability attacks can be chained with other vulnerabilities. Firmware update recommended, especially for internet-facing systems.",
+      "published_date": "2025-01-22T12:30:00Z",
+      "last_modified": "2025-01-24T08:45:00Z",
+      "references": [
+        "https://www.cisa.gov/uscert/ics/advisories/icsa-25-022-01",
+        "https://cert-portal.siemens.com/productcert/pdf/ssa-123456.pdf"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-0123",
+      "severity": "HIGH",
+      "cvss_score": 8.1,
+      "description": "Emerson DeltaV DCS contains an authentication bypass vulnerability in the web interface that allows attackers to gain administrative access by manipulating session tokens.",
+      "ai_insight": "🔶 CREDENTIAL BYPASS: DeltaV systems manage complex industrial processes requiring high availability. Authentication bypass enables unauthorized configuration changes, alarm manipulation, and data access. While requiring network access, this represents significant risk in connected OT environments. Enable MFA and apply patches immediately.",
+      "published_date": "2024-01-15T11:30:00Z",
+      "last_modified": "2024-01-17T15:20:00Z",
+      "references": [
+        "https://www.cisa.gov/uscert/ics/advisories/icsa-24-014-01",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-0123"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-4567",
+      "severity": "HIGH",
+      "cvss_score": 8.8,
+      "description": "Schneider Electric EcoStruxure Building Operation system contains an improper access control vulnerability that allows authenticated users to escalate privileges and access restricted system functions.",
+      "ai_insight": "🔶 PRIVILEGE ESCALATION: Building automation systems control HVAC, lighting, and access control. Privilege escalation could allow malicious insiders or compromised low-privilege accounts to manipulate building systems, create safety hazards, or gain access to restricted areas. Review access controls and apply security updates.",
+      "published_date": "2024-05-30T10:25:00Z",
+      "last_modified": "2024-06-01T13:15:00Z",
+      "references": [
+        "https://www.cisa.gov/uscert/ics/advisories/icsa-24-150-04",
+        "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2024-135-01"
+      ]
+    },
+    {
+      "cve_id": "CVE-2022-2068",
+      "severity": "CRITICAL",
+      "cvss_score": 9.8,
+      "description": "Siemens SIMATIC WinCC and PCS 7 SCADA systems contain a command injection vulnerability in the WebNavigator component that allows remote attackers to execute arbitrary system commands.",
+      "ai_insight": "⚠️ LEGACY SYSTEM RISK: WinCC/PCS 7 installations often remain in production for 10-15 years. Command injection enables full OS-level compromise, allowing attackers to pivot to other systems, install persistence mechanisms, or manipulate process data. Many installations still vulnerable - verify patch status and implement application whitelisting.",
+      "published_date": "2022-06-21T10:15:00Z",
+      "last_modified": "2022-06-23T16:40:00Z",
+      "references": [
+        "https://www.cisa.gov/uscert/ics/advisories/icsa-22-167-06",
+        "https://cert-portal.siemens.com/productcert/pdf/ssa-789456.pdf"
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-22681",
+      "severity": "MEDIUM",
+      "cvss_score": 6.5,
+      "description": "Rockwell Automation ControlLogix 5580 controllers contain a vulnerability that could allow an authenticated attacker to cause a denial of service condition by sending specially crafted CIP packets.",
+      "ai_insight": "🟡 TARGETED DoS: ControlLogix PLCs are prevalent in discrete manufacturing and process control. While requiring authentication, DoS attacks can disrupt production. Impact severity depends on redundancy architecture and process criticality. Implement network segmentation and restrict CIP protocol access to trusted devices only.",
+      "published_date": "2021-03-10T14:15:00Z",
+      "last_modified": "2021-03-12T09:25:00Z",
+      "references": [
+        "https://www.cisa.gov/uscert/ics/advisories/icsa-21-056-02",
+        "https://rockwellautomation.custhelp.com/app/answers/answer_view/a_id/1131698"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-7234",
+      "severity": "MEDIUM",
+      "cvss_score": 6.1,
+      "description": "Phoenix Contact PLCnext control platform contains a cross-site scripting (XSS) vulnerability in the web-based management interface that could allow attackers to inject malicious scripts.",
+      "ai_insight": "🟡 WEB INTERFACE RISK: XSS in industrial controllers typically targets administrative users. Successful exploitation could lead to session hijacking, credential theft, or social engineering attacks. While not directly compromising control logic, it can be stepping stone for more serious attacks. Update firmware and train users on phishing awareness.",
+      "published_date": "2024-08-05T09:15:00Z",
+      "last_modified": "2024-08-07T11:30:00Z",
+      "references": [
+        "https://www.cisa.gov/uscert/ics/advisories/icsa-24-217-03",
+        "https://cert.vde.com/en/advisories/VDE-2024-034/"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1139",
+      "severity": "HIGH",
+      "cvss_score": 7.5,
+      "description": "ABB Ability System 800xA distributed control system contains a path traversal vulnerability in the document management module that could allow unauthorized access to system files and configuration data.",
+      "ai_insight": "🔶 INFORMATION DISCLOSURE: Path traversal in DCS environments can expose critical system configurations, process parameters, and potentially credentials. System 800xA manages complex industrial processes - unauthorized file access could reveal sensitive operational data or enable further attacks. Apply vendor patches and implement file system access controls.",
+      "published_date": "2023-03-07T09:15:00Z",
+      "last_modified": "2023-03-09T14:20:00Z",
+      "references": [
+        "https://www.cisa.gov/uscert/ics/advisories/icsa-23-066-01",
+        "https://search.abb.com/library/Download.aspx?DocumentID=9AKK108467A9447"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-3321",
+      "severity": "MEDIUM",
+      "cvss_score": 6.5,
+      "description": "Mitsubishi Electric MELSEC iQ-R Series PLC contains a denial of service vulnerability that can be triggered by sending malformed SLMP protocol packets to port 5007/TCP.",
+      "ai_insight": "🟡 PROTOCOL VULNERABILITY: MELSEC iQ-R controllers are widely deployed in automotive and electronics manufacturing. DoS via SLMP protocol can halt production lines. Vulnerability is network-based but requires protocol-specific knowledge. Implement protocol filtering at network perimeter and restrict SLMP access to engineering workstations only.",
+      "published_date": "2024-04-12T13:10:00Z",
+      "last_modified": "2024-04-14T10:05:00Z",
+      "references": [
+        "https://www.cisa.gov/uscert/ics/advisories/icsa-24-102-01",
+        "https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2024-001_en.pdf"
+      ]
+    }
+  ]
+}
