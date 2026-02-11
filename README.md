@@ -546,7 +546,7 @@ This project is created for the ControlPoint AI & Data Internship Challenge.
 
 **Your Name**  
 - GitHub: Arksher(https://github.com/ArksherX)
-- Email: owolabimiracle.com
+- Email: owolabimiracle@gmail.com
 
 ---
 
