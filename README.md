@@ -532,6 +532,49 @@ The agent is designed to be modular and extensible:
 - **Custom Reports**: Extend `report_generator.py` for different formats
 
 ---
+## Contributing
+
+Contributions are welcome. Please follow the process below to keep the codebase clean and reviewable.
+
+### Getting Started
+
+1. Fork the repository and clone your fork locally
+2. Create a virtual environment and install dependencies: `pip install -r requirements.txt`
+3. Pull the Qwen model before running: `ollama pull qwen2.5:latest`
+4. Run the agent in fallback mode to verify your setup: `python run_agent.py --fallback`
+
+### Submitting Changes
+
+1. Create a feature branch from main: `git checkout -b feature/your-change-name`
+2. Make your changes with clear, descriptive commit messages
+3. Test your changes locally before pushing: `python run_agent.py --fallback`
+4. Push your branch and open a pull request against main
+5. Describe what you changed, why, and how you tested it in the PR description
+
+### Reporting Issues
+
+Open a GitHub issue with:
+- A clear description of the problem
+- Steps to reproduce
+- Expected vs actual behaviour
+- Your Python version and OS
+
+### Code Style
+
+- Follow PEP 8 for Python code
+- Add docstrings to all new functions
+- Keep functions focused — one responsibility per function
+- Add comments for non-obvious logic, especially in the AI filtering pipeline
+
+### Areas Welcoming Contributions
+
+- Additional OT/ICS keyword coverage in `src/ai_agent.py`
+- New CVE data sources beyond NVD in `src/data_pipeline.py`
+- Dashboard improvements in `src/dashboard.py`
+- Test coverage in `tests/test_agent.py`
+- Docker and deployment improvements
+
+For questions, open an issue or reach out via owolabimiracle@gmail.com
 
 ## 📝 License
 
