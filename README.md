@@ -3,9 +3,6 @@
 **Autonomous AI Agent for Real-time Monitoring of OT/ICS Vulnerabilities**
 
 An intelligent cybersecurity agent that monitors the National Vulnerability Database (NVD) for new CVEs, filters for OT/ICS-relevant threats using Qwen LLM, and displays them on a live Streamlit dashboard.
-
-Built for the ControlPoint AI & Data Internship Challenge.
-
 ---
 
 ## 📋 Table of Contents
@@ -552,7 +549,6 @@ This project is created for the ControlPoint AI & Data Internship Challenge.
 
 ## 🙏 Acknowledgments
 
-- **ControlPoint**: For the internship opportunity and challenge
 - **NIST NVD**: For providing comprehensive CVE data
 - **Ollama Team**: For making LLMs accessible locally
 - **Qwen Team**: For the excellent open-source model
